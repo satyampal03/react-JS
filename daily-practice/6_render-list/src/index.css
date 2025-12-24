@@ -1,0 +1,27 @@
+.category{
+    border: none;
+    border-radius: 5px;
+    color: azure;
+    background-color: black;
+    font-size: 19px;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.list-items{
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-size: 19px;
+    font-family: cursive;
+    box-shadow: 1px 2px 5px gray;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.list-items 
