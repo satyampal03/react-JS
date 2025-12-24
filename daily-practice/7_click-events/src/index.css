@@ -1,0 +1,17 @@
+.btn{
+  height: 40px;
+  width:120px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: azure;
+  box-shadow: 1px 2px 10px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh ;
+  margin-left: 45vw;
+  font-size: larger;
+  font-weight: 500;
+  font-family: cursive;
+}
