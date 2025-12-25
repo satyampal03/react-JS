@@ -1,0 +1,23 @@
+.colorPickerContainer{
+  height: 70vh;
+  background-color: rgb(242, 239, 40);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.color_display{
+  height: 10vh;
+  width: 10vw;
+
+}
+
+input[type = 'color']{
+  height: 10vh;
+  width: 10vw;
+  border: none;
+  border-radius: 10px;
+}
