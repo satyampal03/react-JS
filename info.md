@@ -76,8 +76,30 @@
 
 ## If you want to create the react project with the teplate <br>
 ```npm create vite@latest 1_card -- --template react
+
+###vite 
+[the standard build tool and development server for modern React projects]
+
+Goal	                Command
+Simple Web Practice	    > npm create vite@latest
+Real Product/Professional App > npx 
+create-next-app@latest
+
+Mobile App (iOS/Android)  >npx create-expo-app@latest
+
+High Performance (Rust-powered)	> npx create-rsbuild --template react
+
+
+-----> there are the serval del-tool that are use in their differnet different stats
+
  This will crete the pre-builded template for your application
 ```
+
+### Bun is an all-in-one alternative that can replace Node.js, npm, and Vite all at once for maximum performance.
+
+```Very powerFull that can replace every devlopment tool```
+
+
 
 ## jsx ==> it meand JAVASCRIPT XML
 
@@ -146,3 +168,56 @@ It allows you to controll what gets render in you applicaiton based on certain c
 
 # Render List
 
+```
+Create a array and sort it
+This will easily happen by sort method but if we have an object and want to sort by name not id only by name we have to use here [localCompare()]
+```
+
+# Click Event 
+
+```Click Event => An interaction when user clicks on a specific element, We can respose to click by passing a callback to the onclick event  Handler
+
+do some changes via the onClick Event 
+
+do some external development make the projection to get easily understand the 
+[events] --> make a project on events 
+```
+
+
+# React Hook 
+
+```Specail  Function that allow functional components to use features without writing class components```
+
+```(React V16.8)-->  useState, useEffect, useContext, useReducer, useCallbacks, and many more..```
+
+## useState() 
+
+```A React Hook that allow the creation of a stateful variable and a setter function to update its value in the vertual DOMSUCH AS: [name, setName]```
+
+
+
+#  npx
+> create-vite 9_onchangeEvent-handler --template react
+
+ > Package name: {which dependencies you want write over here (react)}
+
+ > Install with NPM : YES
+
+ > Will install all dependencies or liberaries 
+
+ # On Change Event 
+
+ ```Event  Handler used primarily with form elements ex. <input>, <textarea>, <select>, <radio>, Triggers a function every time the value of the input change```
+
+# Color Picker Application -- 
+
+```react-JS/daily-practice/10_colorPicker```
+
+# Updater Function
+
+``` A function passed as an arrgument to [setState()] 
+
+ex..[ setYear(year+1) ] instead of this updater function we can simply use hre[updater function]
+
+Allow for safe updates based on the previous state Used with multiple state update anf asynchronous functions Good Practice use Updater Function
+```
