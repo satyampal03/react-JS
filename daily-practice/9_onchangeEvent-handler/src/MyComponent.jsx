@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { use } from "react";
+
 
 function MyComponent(){
 
@@ -52,14 +52,16 @@ function MyComponent(){
              <p>Payment Opotion : {payment}</p>
 
              <label>
-                <input type="radio" value='PickUp' onChange={handlerShippingChange} checked={shipping === 'Pick Up'}/>
+                <input type="radio" value='Pick Up' onChange={handlerShippingChange} checked={shipping === 'Pick Up'}/>
                 Pick Up
              </label>
 
             <label>
-                <input type="radio" value='PickUp' onChange={handlerShippingChange} checked={shipping === 'Pick Up'}/>
-                Pick Up
+                <input type="radio" value='Delivery' onChange={handlerShippingChange} checked={shipping === 'Delivery'}/>
+                Delivery
              </label>
+
+            <p>Shipping : {shipping}</p>
         </div>
         </>
     )

@@ -4,9 +4,9 @@ function UserGreeting(props){
     const login_message = <h2 className="login_message">Please Login to Continoue</h2>;
     
     // if(props.isLoggedIn){
-    //     return 
+    //     return <h2 className="welcome_message">Welcome {props.username} Loggin Successfully</h2>;
     // }else{
-    //     return 
+    //     return <h2 className="login_message">Please Login to Continoue</h2>;
     // }
 
     return (props.isLoggedIn ? welcome_message: login_message );

@@ -1,5 +1,22 @@
 /* Module css */
 
+/* 
+.button{
+  height:40px;
+  width: 120px;
+  border:none;
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: black;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+
+
+
+
 /* In this Button folder there was a button component 
 
 we have just used it as the Module-CSS
@@ -19,19 +36,3 @@ export default Button;
 
 
 */
-
-
-/* 
-.button{
-  height:40px;
-  width: 120px;
-  border:none;
-  border-radius: 5px;
-  color: aliceblue;
-  background-color: black;
-  font-size: 17px;
-  font-weight: 600;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-} */
-
-

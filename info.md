@@ -221,3 +221,41 @@ ex..[ setYear(year+1) ] instead of this updater function we can simply use hre[u
 
 Allow for safe updates based on the previous state Used with multiple state update anf asynchronous functions Good Practice use Updater Function
 ```
+
+# Create React Js Dependencies 
+
+> npm create vite@latest <New Directory name>
+
+> Package Name : [react]
+
+> Select Framework : [React]
+
+> Select a Variant : [JavaScript]
+
+> Use rolldown-vite (Experimental)?:
+   
+   │Yes
+
+>  Install with npm and start now?
+    
+    │Yes
+
+> will start [  Installing dependencies with npm...]
+
+# Update the State of the Objects
+
+``` How can we update the satate of the objects
+you insure that you are importing the [UST - State Hook From the React]
+
+useState => 
+ const [variable, setterVariable] = useState(<there we can use primitives and non primitives dataTypes by-default>)
+
+
+import useState from react to your component
+ 
+> import React, {useState} from 'react'
+```
+
+# Update Array State
+
+# Update Array of Objects State

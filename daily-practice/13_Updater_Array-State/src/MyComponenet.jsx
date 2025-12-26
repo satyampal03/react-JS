@@ -25,7 +25,6 @@ function MyComponent(){
     //     </ul>
     //     </> 
 
-
         <>
         <h1>List of  Food</h1>
         <ul>

@@ -43,7 +43,7 @@ function List(props){
     return <ul>{listItems}</ul>;
 */
 
-// -------------------Fut data to main applicaiton----------
+// -------------------Put data to main applicaiton----------
 // use the data that come from the  parent 
 
 
