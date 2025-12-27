@@ -259,3 +259,77 @@ import useState from react to your component
 # Update Array State
 
 # Update Array of Objects State
+
+# To Do Project 
+
+# Use Effect React JS
+
+```
+useEffect() -> 
+React Hook that tells React To Do SOME CODE When (pick one): 
+
+This Component Re-render
+This Component Mounts
+The State of a Value
+
+
+1. useEffect(() => {})
+   // Runs after every re-render
+2. useEffect(() => {}, [])
+   // Runs only on mount
+3. useEffect(() => {}, [value])
+   // Runs on mount + when value changes
+
+USES
+#1 Event Listeners
+#2 DOM manipulation
+#3 Subscriptions (real-time updates)
+#4 Fetching Data from an API
+#5 Clean up when a component unmounts
+
+
+useEffect(function, [dependencies])
+useEffect(() => {})
+// Runs after every re-render
+useEffect(() => {}, [])
+// Runs only on mount
+useEffect(() => {}, [value])
+// Runs on mount + when value changes
+
+
+
+> using of USEEFFECT HOOKS In React
+   1. code very orgainized 
+   2. useEffect hook --> you could tell what exactly code runs, it runs during every rendring
+   3. when componet mounts or When one of these value, 
+   4. if you don't use the useEffect(Hook); --> then this code will runs each and every single couple of time.
+
+
+
+   --> Mount / UnMount
+```
+#  digital clack application
+
+# useContext Hook 
+```useContext() = React Hook that allows you to share values between multiple levels of components without passing props through each level
+
+PROVIDER COMPONENT
+> import React, { createContext } from 'react';
+
+> export const MyContext = createContext();
+
+<MyContext.Provider value={value}>
+  <Child />
+</MyContext.Provider>
+
+CONSUMER COMPONENTS
+
+import React, { useContext } from 'react';
+
+import { MyContext } from './ComponentA';
+
+const value = useContext(MyContext);
+```
+
+
+
