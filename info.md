@@ -1,4 +1,67 @@
 # React JS 
+React.js is a free, open-source JavaScript library used primarily to build fast and interactive user interfaces (UIs) for websites and mobile apps
+
+
+1. Fundamentals (The Basics)
+
+ > JSX: Writing HTML-like code inside JavaScript.
+
+ >Components: Building reusable UI pieces 
+ (Functional components are the modern standard).
+
+ >Props: Passing data from parent to child components.
+
+ >State (useState): Managing data that changes over time within a component.
+
+ >Lists and Keys: Rendering arrays of data efficiently using unique identifiers.
+
+ >Conditional Rendering: Showing or hiding parts of the UI based on conditions
+
+2. Core Hooks & Logic
+
+> useEffect: Handling "side effects" like fetching data or setting up subscriptions.
+
+> useContext: Sharing global data across the whole app without "prop drilling".
+
+> useRef: Directly accessing DOM elements or persisting values without re-rendering
+
+> useReducer: Managing complex state logic in a single place.
+
+3. Navigation & State Management
+
+> React Router: Managing multiple "pages" and URL navigation.
+
+> Global State Libraries: Moving beyond basic Context to tools like Zustand, Redux Toolkit, or Jotai.
+
+> Data Fetching: Using libraries like TanStack Query (React Query) or Axios for API management. 
+
+4. Advanced Performance
+
+> Memoization: Using useMemo, useCallback, and React.memo to prevent unnecessary re-renders.
+
+> Lazy Loading & Suspense: Splitting code so parts of the app only load when needed.
+
+> Error Boundaries: Catching JavaScript errors in components so the whole app doesn't crash. 
+
+5. New in React 19 (2025 Standard)
+
+> React Compiler: A tool that automatically optimizes code so you don't need manual memoization
+
+> React Server Components (RSC): Rendering components on the server for faster initial loads.
+
+> Actions API: Simplified ways to handle form submissions and data updates.
+
+> New Hooks: Includes useActionState (managing form states), useOptimistic (instant UI feedback), and the use API for reading resources like promises. 
+
+6. The Broader Ecosystem
+
+> Styling: Modern approaches like Tailwind CSS, CSS Modules, or Styled Components.
+
+> Testing: Writing unit and integration tests using Vitest, Jest, and React Testing Library.
+
+> Next.js: The most popular full-stack framework for React apps in 2025.
+
+> React Native: Using React to build mobile apps for iOS and Android. 
 
 
 ## npm 
@@ -118,6 +181,25 @@ High Performance (Rust-powered)	> npx create-rsbuild --template react
 
  # Props in React 
 
+ >  the mechanism used to pass data from a parent component to a child component
+
+
+> <Child-Component name='Shivam' age ={40} friend = 'Ramesh'/>
+
+> In child -->
+
+```function Student(props){
+    return (
+        <div className="student">
+            <p>Name : {props.name}</p>
+            <p>Age : {props.age}</p>
+            <p>Friend : {props.friend}</p>
+        </div>
+    )
+}```
+   
+
+
 ```
 Props => Reac only Properties that are shared b/w components.
 
@@ -144,26 +226,32 @@ In Prop Types we give the string on the numberic this will throw an error
 - Documents Component Usage
 - Provides Runtime Warnings 
 
-[a library used for runtime type-checking of the props (properties) passed to a component]
+[a library used for runtime type-checking of the props (properties) passed to a component]```
 
-```
 ## Default PropTypes
 
-```
-
-In Latest version of react 19.x, it does not support  Default Prop
-
+```In Latest version of react 19.x, it does not support  Default Prop
 
 Default Values for props in case they are not passed from the parent Component 
 
-Example Name:'Guest'
-```
+Example Name:'Guest';
 
+Student.propTypes = {
+    Name : PropTypes.string,    
+    Age : PropTypes.number,
+    Friend : PropTypes.string,
+}
+
+// Student.defaultProps = {
+//     Name : 'Guest',    
+//     Age : 0,
+//     Friend : 'Naveen',
+// }
+>
 
 # Conditional Rendring
 
-``` 
-It allows you to controll what gets render in you applicaiton based on certain conditions (Show, hide, or Change Component)
+```It allows you to controll what gets render in you applicaiton based on certain conditions (Show, hide, or Change Component)
 ```
 
 # Render List
@@ -342,3 +430,4 @@ useRef() = "use Reference" Does not cause re-renders when its value changes. Whe
 Accessing/Interacting with DOM elements
 Handling Focus, Animations, and Transitions
 Managing Timers and Intervals
+
