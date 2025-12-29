@@ -214,3 +214,60 @@ li:hover{
   color: aqua;
   cursor: pointer;
 }
+
+.updateTask{
+  height: inherit;
+  width: 70px;
+   background-color: rgb(157, 159, 21);
+   color: white;
+   border: none;
+   border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.updateContent-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.editInput{
+  height: 35px;
+  width: 40vw;
+  font-size: 20px;
+  font-size:20px;
+  color: rgb(6, 116, 126);
+  font-family:monospace;
+  border: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding-left: 20px;
+
+  box-shadow: 1px 2px 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.editInput-btn{
+   height: 35px;
+  width: auto;
+  font-size: 20px;
+  font-size:20px;
+  color: rgb(6, 116, 126);
+  font-family:monospace;
+  border: none;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-left: none;
+
+  box-shadow: 1px 2px 5px;
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

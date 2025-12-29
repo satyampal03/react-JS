@@ -2,10 +2,58 @@ import React, {useState} from 'react';
 
 function ToDoList(){
     const [tasks, setTasks] = useState(['xTask','xTask']);
+
     const [newTask, setNewTask] = useState('');
 
     const [newCompletedTask, setNewCompletedTask] = useState([]);
 
+    // ########################################
+
+
+    const [updateValue, setUpdateValue] = useState('');
+
+    // let indexIs;
+
+    function updateTask(index){
+        const updateTask = tasks.filter((_,i)=>{
+            // indexIs = i;
+            return index === i;
+
+        })
+
+
+        const deleteTask = tasks.filter((_,i)=>{
+            // indexIs = i;
+            return index !== i;
+        })
+
+        const display = document.getElementsByClassName('.updateContent-box')
+
+        setUpdateValue(updateTask);
+        setTasks(deleteTask);
+        
+    }
+// console.log(indexIs);
+    function newupdatedTask(e){
+        setUpdateValue(e.target.value)
+    }
+
+    // function valueChanged(){
+    //     setTasks(newTaskUpdated => ([...newTaskUpdated,updateValue ]));
+    //     setUpdateValue('');
+    // }
+
+
+    function valueChanged(){
+        if(updateValue.trim() !== ''){
+            setTasks(newTaskUpdated => ([...newTaskUpdated,updateValue ]));
+            setUpdateValue('');
+        }
+
+        console.log('Clicked');
+    }
+
+    // ##############################################
 
 
     function updateNewTaskValue(event){
@@ -35,6 +83,7 @@ function ToDoList(){
             [updateTaskUp[index], updateTaskUp[index-1]] = [updateTaskUp[index-1], updateTaskUp[index]]
 
             setTasks(updateTaskUp);
+
 
         }
 
@@ -92,9 +141,20 @@ function ToDoList(){
         <div className='pendingTask-Container'>
             <ol>
             <h2 className='pending'> Pending Taks</h2>
+
+{/*  */}
+
+            <div className='updateContent-box '  >
+                <input className='editInput' type="text" placeholder='Edit Task' value = {updateValue} onChange={newupdatedTask}/>    
+                <button className='editInput-btn' onClick={valueChanged}>✔️</button>
+            </div>
+
+
+
             {tasks.map((task, index)=>{
                 return <li key={index}><span className='task'> {task}</span> 
                    <div className='task-crud'>
+                    <button className='updateTask' onClick={() => updateTask(index)}>Edit</button>
                     <button className='deleteTask' onClick={() => deleteTask(index)}>Delete</button>
                     <button className='completedTask' onClick={() => completedTask(index)}>Completed</button>
                     <button className='moveTask' onClick={() => moveTaskUp(index)}>⬆️</button>
