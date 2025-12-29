@@ -1,4 +1,4 @@
-function rofilepicture (){
+function Profilepicture (){
 
     const profilePic = './assets/satyam--.png';
 

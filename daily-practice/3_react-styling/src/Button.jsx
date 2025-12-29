@@ -1,4 +1,6 @@
 function Button(){
+   
+   // inline css
     const styles = {
     height:"40px",
     width: "120px",
@@ -9,6 +11,7 @@ function Button(){
     fontSize: "17px",
     fontWeight: "400",
     }
+
     
     return (
         <button style={styles}> Click Me</button>
