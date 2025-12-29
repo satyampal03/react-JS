@@ -8,34 +8,24 @@ function ToDoList(){
     const [newCompletedTask, setNewCompletedTask] = useState([]);
 
     // ########################################
-
-
     const [updateValue, setUpdateValue] = useState('');
 
-    // let indexIs;
-
     function updateTask(index){
+        
         const updateTask = tasks.filter((_,i)=>{
-            // indexIs = i;
             return index === i;
-
         })
-
-
+        
         const deleteTask = tasks.filter((_,i)=>{
-            // indexIs = i;
             return index !== i;
         })
-
-        const display = document.getElementsByClassName('.updateContent-box')
-
-        setUpdateValue(updateTask);
+        setNewTask(updateTask);
         setTasks(deleteTask);
         
     }
 // console.log(indexIs);
     function newupdatedTask(e){
-        setUpdateValue(e.target.value)
+        setNewTask(e.target.value)
     }
 
     // function valueChanged(){
@@ -44,14 +34,14 @@ function ToDoList(){
     // }
 
 
-    function valueChanged(){
-        if(updateValue.trim() !== ''){
-            setTasks(newTaskUpdated => ([...newTaskUpdated,updateValue ]));
-            setUpdateValue('');
-        }
+    // function valueChanged(){
+    //     if(updateValue.trim() !== ''){
+    //         setTasks(newTaskUpdated => ([...newTaskUpdated,updateValue ]));
+    //         setUpdateValue('');
+    //     }
 
-        console.log('Clicked');
-    }
+    //     console.log('Clicked');
+    // }
 
     // ##############################################
 
@@ -142,12 +132,11 @@ function ToDoList(){
             <ol>
             <h2 className='pending'> Pending Taks</h2>
 
-{/*  */}
 
-            <div className='updateContent-box '  >
+            {/* <div className='updateContent-box '  >
                 <input className='editInput' type="text" placeholder='Edit Task' value = {updateValue} onChange={newupdatedTask}/>    
-                <button className='editInput-btn' onClick={valueChanged}>✔️</button>
-            </div>
+                <button className='editInput-btn' onClick={addTask}>✔️</button>
+            </div> */}
 
 
 
