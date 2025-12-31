@@ -1,0 +1,30 @@
+/* Style Sheet */
+
+.welcome_message{
+  background-color: rgb(17, 168, 120); 
+  font-size: larger;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  color: azure;
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_message{
+    background-color: rgb(194, 28, 16); 
+  font-size: larger;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  color: azure;
+  border-radius: 20px;
+  border: none;
+  border: none;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
