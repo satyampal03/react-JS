@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                <script>
+        const companies = [
+  {name: "Google", category: "Product Based", start: 1981, end: 2004},
+  {name: "Amazon", category: "Product Based", start: 1992, end: 2008},
+  {name: "Paytm", category: "Product Based", start: 1999, end: 2007},
+  {name: "Coforge", category: "Service Based", start: 1989, end: 2010},
+  {name: "Mindtree", category: "Service Based", start: 1989, end: 2010}
+];  
+
+
+                    companies.forEach((company, index) => {
+                        console.log(`${company.start}, ${company.name}, ${company.end}`);
+                    }
+                );
+
+
+                // If we want write the forEach In one line-- ?
+
+                companies.forEach((comp, index)=>(console.log(`${comp.category}, ${comp.name}`)));
+    </script>
+</body>
+</html>

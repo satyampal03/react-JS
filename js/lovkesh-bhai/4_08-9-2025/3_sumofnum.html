@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let userInp = prompt("Enter Number to be Add");
+
+        userInp = Number.parseInt(userInp);
+
+        let sum = 0;
+
+        while(userInp > 0){
+            let rem = userInp % 10;
+            sum += rem;
+            
+            userInp = Math.floor(userInp / 10);
+            
+        }
+        document.write(sum);
+    </script>
+</body>
+</html>

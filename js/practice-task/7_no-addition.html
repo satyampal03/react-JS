@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+         Sum of Digits:
+Ask the user for a number and calculate the sum of its digits using a loop and if-else.
+
+    </h1>
+
+    <script>
+     function userNum(a){
+        let sum = 0;
+        
+            while(a > 0){
+
+               let  remValue = (a % 10);
+
+               sum = (sum + remValue);
+
+
+              a = Math.floor(a / 10);
+
+            }
+           return sum;
+          
+        }
+
+        let userdata = userNum(84545755674567456774764766776546745546547547447576467857458758465764658675867598678967586756878676554756587);
+
+        console.log(userdata);
+
+    </script>
+</body>
+</html>

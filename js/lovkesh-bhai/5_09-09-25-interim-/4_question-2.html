@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .heading{
+            border: 1px solid;
+            height: 40px;
+            width: 600px;
+            padding: 0px 12px;
+            margin: 40px;
+            background-color: red;
+        }
+        .para-class{
+            border: 1px solid;
+            height: 150px;
+            width: 600px;
+            padding: 30px;
+            margin: 40px;
+
+            background-color:lightblue;
+        }
+
+
+        .new-class{
+            border: 1px solid;
+            height: 150px;
+            width: 600px;
+            padding: 30px;
+            margin: 40px;
+            background-color: greenyellow;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Toggle the visibility of a paragraph (show/hide text)
+     using a button. -->
+    <div>
+        <h1 class="heading"> Q.1 - What is Add & Remove Class in Js ?</h1>
+
+        <p id="paraid" class="para-class "></p>
+        
+        <button id="showButton">Show - Answer</button>
+        <button id="hideButton">Hide - Answer</button>
+
+    </div>
+
+    <script>
+        document.getElementById('showButton').onclick = function() {
+            
+            let buttonText = document.getElementById('paraid');
+            buttonText.classList.toggle('new-class'); // TOGGLE 
+            
+              buttonText.innerText = `In JavaScript, "Add and Remove Class"
+               refers to the process of dynamically modifying the CSS classes applied to an HTML element.
+                This is typically done using the classList property of an element, which provides methods for
+               manipulating its class list.
+
+               <code> element.classList.add("mystyle"); </code> // Add a New Class
+
+                <code> element.classList.remove("mystyle");;</code> // Remove a New Class
+                 
+                 `;
+              
+        }
+
+        document.getElementById('hideButton').onclick = function() {
+            let buttonText = document.getElementById('paraid');
+            buttonText.classList.toggle('new-class'); // TOGGLE 
+            
+            buttonText.innerText = ``;
+              
+        }
+        
+    </script>
+</body>
+</html>

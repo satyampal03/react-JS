@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+  <li><button id="btn1">DELETE 1 </button></li>
+  <li><button id="btn2">DELETE 2</button></li>
+  <li><button id="btn3">DELETE 3</button></li>
+  <li><button id="btn4">DELETE 4</button></li>
+  <li><button id="btn5">DELETE 5</button></li>
+  <li><button id="btn6">DELETE 6</button></li>
+  <li><button id="btn7">DELETE 7</button></li>
+  <li><button id="btn8">DELETE 8</button></li>
+  <li><button id="btn9">DELETE 9</button></li>
+  <li><button id="btn11">DELETE 10</button></li>
+  <li><button id="btn12">DELETE 11</button></li>
+  <li><button id="btn13">DELETE 12</button></li>
+  <li><button id="btn14">DELETE 13</button></li>
+  <li><button id="btn15">DELETE 14</button></li>
+  <li><button id="btn223">DELETE 15 </button></li>
+  <li><button id="btn23">DELETE 16</button></li>
+  <li><button id="btn22">DELETE 17</button></li>
+  <li><button id="btn23">DELETE 18</button></li>
+</ul>
+
+<script>
+  
+        let delete_button = document.getElementsByTagName('li');
+
+        let button_click = document.getElementsByTagName('button');
+
+        button_click.addeventListner('click', (evntName) => {
+
+            let button_id = (evntName.target.id);
+                
+             let parentElement_is = button_id.parentElement('li');
+
+            parentElement_is.innerHTML = '';
+        
+        })
+
+
+</script>
+</body>
+</html>

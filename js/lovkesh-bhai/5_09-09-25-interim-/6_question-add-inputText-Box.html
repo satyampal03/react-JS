@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+
+<body>
+
+    <!-- Create a list where you can add new items by typing in an input box
+     and clicking an "Add" button. -->
+
+
+    <div class="mainContainer">
+
+        <pre>
+        <label for="">Plese Write Your  'Thought'</label>
+            
+            <ul id="addText"></p>>
+
+            </ul> 
+
+        <input type="text" id="userInp">
+            
+        <button id="button">Add You'r Thought</button>
+
+        </pre>
+
+    </div>
+
+    <script>
+        
+        document.getElementById('button').onclick = function (){
+          let  userData  = document.getElementById('userInp').value;
+            
+        document.getElementById('addText').innerHTML = `<li> ${userData} </li>`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <div class ="container">
+        <div class="boxclass" id="boxid"></div>
+        <div class="boxclass" id="boxid1"></div>
+    </div>
+
+    <button onclick="myfunc()">Lap Now</button>
+    <p id="lapresult"></p>
+
+    <script>
+
+       
+            let time = document.getElementById('boxid');
+
+            
+
+
+         setInterval(() => {
+
+                    let x = new Date()  
+
+
+        let milSec = x.getMilliseconds()
+        let sec = x.getSeconds()
+        let min = x.getMinutes()
+        let hour = x.getHours()
+        let day = x.getDay()
+        let month = x.getMonth()
+        let yr = x.getFullYear()
+        
+
+           time.innerHTML = `<h1>  Mili Seconds => ${milSec}, Seconds =>  ${sec}, Minutes => ${min},  Hours => ${hour} </h1>`;
+
+
+            
+        }, 1);
+
+    //                   setInterval(() => {
+    //        let a =  document.getElementById('lapresult');
+
+    //             a.innerHTML  = time.innerHTML = `<h1>  Mili Seconds => ${milSec}, Seconds =>  ${sec}, Minutes => ${min},  Hours => ${hour} </h1>`;
+    //     },
+    // myfunc)
+        
+     
+        
+        
+    </script>
+</body>
+</html>

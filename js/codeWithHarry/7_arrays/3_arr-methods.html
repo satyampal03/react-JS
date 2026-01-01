@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // to string
+        let arr = ["*","*","*","*","*","*","*","*","*","*"];
+
+        let a = arr.toString();
+        console.log(a);
+
+        console.log(typeof a );
+
+        // join Method it used to add the all elements of an array into a string
+
+        console.log(arr.join("_______________"));
+
+
+        let arr2 = [ ]; 
+        arr2.push("harry");
+        arr2.push("Rohan");
+        arr2.push("Shubham");
+
+
+        console.log(arr2);   // ["harry", "Rohan", "Shubham"]
+
+
+
+        // shift method it removes the first element from an array and returns that removed element. This method changes the length of the array.
+        console.log( arr2.shift() ); // harry    
+        
+        console.log(arr2);  // ["Rohan", "Shubham"]
+
+
+        console.log( arr2.unshift("Harry") ); // 3  it returns the new length of the array
+
+        console.log(arr2);  // ["Harry", "Rohan", "Shubham"]
+
+        
+
+        </script>
+</body>
+</html>

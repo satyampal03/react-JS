@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+           <script>
+
+            // filter in js ===>
+
+        let age = [23, 54,23,5,34,7,4,67,23,54,2,65,34]
+        
+        /*
+            for(
+                i = 0;
+                 i< age.length;
+                  i++){
+                    if(age[i] >= 30){
+                         console.log(age[i]);
+                    }
+                   
+                  }
+                */
+
+            // normal funciton for filter method
+    /*                age.filter(function(age){
+                    if(age >= 20){
+                    console.log("ye upr hai 20 ke ");
+                    }else{
+                        console.log("ye wala niche hai 20 k");
+                    }
+                })
+
+            */
+
+            // arrow function for filter method
+
+            age.filter((age)=>{
+                if(age >= 20){
+                    console.log("ye upr hai 20 ke ");
+                    }else{
+                        console.log("ye wala niche hai 20 k");
+                    }
+            })
+
+
+            // in line arrow function == ?
+
+            const ageP = age.filter((age)=> (age <= 20 ));
+
+
+            console.log(ageP);
+
+
+            // 
+    </script>
+</body>
+</html>

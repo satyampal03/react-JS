@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <script>
+
+        //        function loopfun(userInp){
+
+                    let userValue = 494;    // function Scope
+                    let sum = 0;
+
+                    while( userValue > 0){  // j,bb tkk no greater than 0  na HO
+                        
+                        let rem = userValue % 10;   // Block Scope  also Lexical Scope.  // remender
+
+                        sum = sum + rem;  // 4 + 4 = 8
+
+                        userValue = Math.floor(userValue / 10);  //    Quotient
+
+
+                        console.log(userValue);
+
+
+
+
+                }
+
+                //     return userValue;
+                // }       
+
+
+                // const x = loopfun(487);
+
+
+                // console.log(x);
+                
+            </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li> delete me   <button id="button">Delete</button></li>
+    </ul>
+
+    <script>
+
+
+
+        let listItem_id = document.getElementById('button');
+
+        let parent = listItem_id.parentElement;
+        
+        let list = parent.parentElement;
+
+        listItem_id.addEventListener('click', () =>{
+
+        list.innerHTML = '';
+
+        })
+    </script>
+</body>
+</html>

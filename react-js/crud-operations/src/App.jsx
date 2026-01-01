@@ -11,7 +11,7 @@ function App (){
   const [id, setId] = useState(0);
 
   // Just syncing the data
-    
+
   useEffect(()=>{
     setData(EmployData)
   }, []);
@@ -23,6 +23,7 @@ function App (){
     })
   }
 
+  
   // Delete Feature
     const deleteData =(id, index)=>{
 

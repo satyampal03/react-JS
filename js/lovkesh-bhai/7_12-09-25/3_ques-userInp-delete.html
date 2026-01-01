@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 30px;
+            background-color: #abb6b6;
+            padding: 12px;
+            display: flex;
+        }
+        .ul-box{
+            height: auto;
+            width: 50%;
+            margin: 3px;
+            background-color: rgb(95, 218, 218);
+            padding: 12px;
+            /* list-style:     ; */
+        }
+                
+        .main-tex{
+            height: 300px;
+            width: 50%;
+            margin: 3px;
+            background-color: rgb(117, 137, 138);
+            padding: 12px;
+            text-align:center;
+            align-content: center;
+            font-size: 30px;
+            color: #043131;
+        }
+
+        
+        .input-button-box{
+            padding: 2px;
+            display: flex;
+        }
+        .input{
+            height: auto;
+            width: 80%;
+            margin: 0px 10px;
+            font-size:30px ;
+            /* color: rgb(95, 218, 218); */
+            
+            color :#f80000;
+        }
+        .button{
+            height: auto;
+            width: 20%;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="ul-box">
+            <ul id="list"></ul>
+        </div>
+        <div class="main-tex">Please Input Something To Push
+            <div class="input-button-box">
+                <input type="text"  id="input" class="input">
+                <button id="button" class="button">Push</button>
+            </div>
+        </div>
+    </div>
+        <!-- Script  -->
+    <script>
+
+        /*
+        approches ==>
+
+        1) On user Click Get value into list 
+
+        2) List Should Generate the Delete Button and Should be work
+         (remove that specific list on click delete button)
+        */
+
+        let   listElem = document.getElementById('list');
+
+        let   inputElement = document.getElementById('input');
+
+        let   buttonElement = document.getElementById('button');
+
+            buttonElement.addEventListener('click', (evnt) =>{
+
+                let userInp = inputElement.value; // user Value 
+
+                // let list_formate = `<li> ${userInp} <button onclick='deleteListItemHanlder'>Delete</button></li>`;
+
+                // let previous_data =  listElem.innerHTML;
+
+                // listElem.innerHTML = listElem.innerHTML + list_formate ;
+
+                const liItem = document.createElement('li'); // li elem create kiya hai
+
+                const button = document.createElement('button'); // button elem bhi create kiya hai
+
+                button.innerHTML = "DELETE";  // button me text node delete
+
+                button.onclick = deleteListItemHanlder;  // button ke click pr event call hua hai
+
+                const textNode = document.createElement('span'); // ek span bhi create kiya hai
+
+                textNode.innerHTML = userInp;
+
+                liItem.appendChild(textNode);
+
+                liItem.appendChild(button);
+
+                
+                listElem.appendChild(textNode);
+
+
+                // ul --> li --> text + button ;
+
+                inputElement.value = '';
+            }) 
+
+            function deleteListItemHanlder (e){
+
+
+                
+            }
+
+            console.log(typeof listElem); // it means listElem is an object  ul --?
+            
+            let delete_button = listElem.getElementsByTagName('button');
+
+            // console.log(typeof delete_button);
+
+            let arr_list = Array.from(delete_button);
+
+
+            arr_list.forEach((elem) => {
+
+                elem.addEventListener('click', (e) =>{
+
+                    let present_Element_Location = e.target;
+
+                    let parent_element = present_Element_Located.parentElement();
+
+                    console.log(parent_element);
+
+                    parent_element.remove();
+
+                })
+
+            })
+
+
+
+
+            // list Created with User Data --
+
+            // now i want delete the list ---
+        
+
+        // let  arr = [];
+
+
+        // buttonElement.addEventListener('click', (e) => {
+        //     console.log("Event Type", e.clientX, e.clientY);
+
+        //             let input_value_get = inputElement.value;
+        //             let list_value_push = ` <li> 
+        //                 ${input_value_get}
+        //                 <button > DELETE </button>    
+        //             </li>`;
+        //             let availble_html_inList = listElem.innerHTML;
+
+        //      listElem.innerHTML = availble_html_inList + list_value_push;
+
+        //      inputElement.innerHTML = '';
+
+
+        //       })
+
+            
+            //  inputElement.value = '';
+
+
+            //  let delete_list = document.getElementById('delete_Button');
+
+            //  delete_list.addEventListener('click', (e)=>{
+
+            //     listElem.remove();
+
+            //  })
+
+
+                 /*
+
+                1. Take input from and when user clicks on push button
+
+                2. Add it to my array 
+
+                3.then in click event listener loop over the array and make the li and button with unique ids
+
+                e.g (li-${i}, button-${i}) and append it to <ul>
+
+                4. When user clicks on delete, check the e.target.id e.g. ${button-2}
+             */
+
+
+
+
+
+                // creating button tag 
+
+                // let li_tag_Element = document.getElementsByTagName('li');
+                // let new_delete_button = document.createElement('button');  
+                // new_delete_button.innerHTML = "DELETE"
+                // li_tag_Element[0].appendChild(new_delete_button);
+
+
+                // now giving the name to my button
+
+                //   let button_Name = document.createTextNode('DELETE');
+
+                //   li_tag_Element[0].document.getElementsByTagName('button').appendChild(button_Name)
+
+                //   button_Element.appendChild(button_Name);
+            //  }
+
+       
+    
+
+            // document.getElementsByTagName
+
+
+
+
+
+
+
+
+
+            
+
+        //           let button_arr = Array.from(listElem);
+
+        // button_arr.forEach((btn) => {
+            
+        //     btn.addEventListener('click', (e) => {
+
+        //         // console.log(e);
+
+        //     let button_target_Element = (e.target);
+
+        //     let parent_elemt_li = button_target_Element.parentElement; //  Get Parent Element
+
+        //        parent_elemt_li.remove();
+                
+
+        //     })
+
+    </script>
+</body>
+</html>

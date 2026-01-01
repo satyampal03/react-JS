@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*    let name = "Saim";
+        function myfunc(){
+
+         console.log(name)
+
+        }
+        myfunc(); 
+
+        // =====> this is can possible but if we want to call it out of the scope that will not happen
+        */
+
+        
+
+ function exampleFunctionScope() {
+  var functionScopedVar = "I am function-scoped";
+//   console.log(functionScopedVar); // Accessible within the function
+}
+
+exampleFunctionScope();
+console.log(functionScopedVar); // Throws ReferenceError: functionScopedVar is not defined
+
+
+        
+
+        // ====> not possible to use the value outside of function scope because "let" 
+        // let is the block scoped variable;
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: rgb(231, 238, 18);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 450px;
+            padding: 10px;
+            row-gap: 10px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(8, 203, 4);
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="mainid">
+        <div class="box" id="myId">I AM RED</div>
+        <div class="box" id="div2"></div>
+        <div class="box" id="div3"></div>
+        <div class="box" id="div4"></div>
+    </div>
+
+    <script>
+
+        // let box1 = document.getElementById("div1");
+        // box1.innerHTML = "This is Box 0";
+
+
+       // let x = document.getElementById("myId");
+
+        // x.innerHTML = "I'm BOX";
+
+//         x.style.color = "red";
+
+
+//     let image1 = document.getElementById("div3");
+
+
+//   image1.innerHTML = " <img src='image1.jpg' alt='image'>";
+
+
+
+
+    // Example using getElementById
+    //const myElement = document.getElementById('myId');
+
+    // Example using querySelector
+    //const anotherElement = document.querySelector('.box');
+
+
+
+      // Changing the src attribute of an image
+       // myElement.src = 'new_image.jpg';
+
+        // Changing the value of an input field
+        //anotherElement.value = 'New Input Value';
+
+
+
+        
+        let newPara =   document.createElement('p');
+
+        newPara.innerText = " this is heading 1st ";
+
+        const yemainhai = document.getElementById('mainid');
+
+        yemainhai.appendChild(newPara);
+    </script>
+
+</body>
+
+</html>

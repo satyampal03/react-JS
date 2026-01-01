@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [65,45,6,45,6545,6,456,6,45,6567,45,6,534,5,6,546,45,654,6,56,6,5,5,6,6,56,456,546,54,6,];
+
+            let evArr = [];
+
+            let odArr = [];
+
+            for (i = 0; i < arr.length; i++){
+
+                if(arr[i] % 2 == 0){
+
+                    evArr.push(arr[i]);
+                }else{
+
+                    odArr.push(arr[i]);
+                    
+                }
+            }
+
+            console.log(evArr, odArr);
+    </script>
+</body>
+</html>

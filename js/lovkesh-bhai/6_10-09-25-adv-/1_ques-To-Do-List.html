@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. To-Do List App
+
+Add new items with an input + button.
+
+Each item should have a delete button.
+
+Clicking an item toggles completed (strikethrough) style. -->
+
+
+    <div>
+        <h1>Add Itema  to (TO DO LIST)</h1>
+        <ul id="list"></ul>
+
+        <input type="text" id="input">
+        <button id="button">Add Items</button>
+
+    </div>
+
+    <script>
+        let inputEle = document.getElementById('input');
+        let btnEle = document.getElementById('button');
+        let ulEle = document.getElementById('list');
+
+
+        btnEle.addEventListener('click', () => {
+
+            let userInput = inputEle.value;  
+            
+            let listEle = `<li>${userInput} </li>`;
+
+            let ulCurrentHTML = ulEle.innerHTML; 
+            
+            ulEle.innerHTML = ulCurrentHTML + listEle;
+
+            inputEle.value = '';
+        })
+
+
+
+        
+    </script>
+</body>
+
+</html>
