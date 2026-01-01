@@ -10,6 +10,8 @@ function App (){
   const [age, setage] = useState(0);
   const [id, setId] = useState(0);
 
+  // Just syncing the data
+    
   useEffect(()=>{
     setData(EmployData)
   }, []);
