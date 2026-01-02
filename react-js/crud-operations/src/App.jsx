@@ -10,17 +10,28 @@ function App (){
   const [age, setage] = useState(0);
   const [id, setId] = useState(0);
 
-  // Just syncing the data
+  const [updateBtn, setUpdateBtn] = useState(false);
 
+  // Just syncing the data From Emplyed Data list
   useEffect(()=>{
     setData(EmployData)
-  }, []);
+  }, []); 
 
   // Edit Feature
   const editData =(id, _)=>{
-    const dt = data.filter((item,_,_)=>{
+    const dt = data.filter((item, _)=>{
         return item.id === id; 
-    })
+    });
+
+    setId(id);
+    setFname(dt[0].fname);
+    setLname(dt[0].lname);
+    setage(dt[0].age);
+    // if(dt !== undefined){
+    //   setId(dt[0].id)
+    // }
+
+    setUpdateBtn(true);
   }
 
   
@@ -47,10 +58,19 @@ function App (){
 
     // clear Feature 
     const clear = ()=>{
-      
+    setId('');
+    setFname('');
+    setLname('');
+    setage('');
+
+    setUpdateBtn(false);
     }
 
 
+    // update feature
+    const update = ()=>{
+      
+    }
 
   return(<>
 
@@ -61,21 +81,26 @@ function App (){
         <div className="add-employe">
           <div>
           <label htmlFor="">First Name : 
-            <input type="text" placeholder="Enter First Name" onChange={(e)=>setFname(e.target.value)}/> 
+            <input type="text" placeholder="Enter First Name" onChange={(e)=>setFname(e.target.value)} value={fname}/> 
           </label>
           <label htmlFor="">Last Name : 
-            <input type="text" placeholder="Enter Last Name"  onChange={(e)=>setLname(e.target.value)}/> 
+            <input type="text" placeholder="Enter Last Name"  onChange={(e)=>setLname(e.target.value)} value={lname}/> 
           </label>
 
           <label htmlFor="">Age : 
-            <input type="text" placeholder="Enter First Name"  onChange={(e)=>setAge(e.target.value)}/> 
+            <input type="text" placeholder="Enter First Name"  onChange={(e)=>setage(e.target.value)} value={age}/> 
           </label>
 
           </div>
 
           
         <div className="action-btns form-temp">
-                  <button className="btn btn-edit" onClick={()=> save()}>Save</button>
+                 
+                 {
+                  !updateBtn ?
+                  <button className="btn btn-edit" onClick={()=> save()}>Save</button>:
+                  <button className="btn btn-edit" onClick={()=> update()}>Update</button>
+                 } 
                   <button className="btn btn-delete" onClick={()=> clear()}>Clear</button>
         </div>
         </div>
@@ -93,7 +118,6 @@ function App (){
               </ul>
             
             {/* List Rendring Here */}
-
           {data.map((item,index, _) =>{
             return (
               <ul key={index}>
@@ -102,7 +126,7 @@ function App (){
                 <li>{item.lname}</li>
                 <li>{item.age}</li>
                 <li className="action-btns">
-                  <button className="btn btn-edit" onClick={()=> editData(item.id,index)}>Edit</button>
+                  <button className="btn btn-edit" onClick={()=> editData(item.id, index)}>Edit</button>
                   {/* id that's why use that we can easily target the postion and the value of each n every data */}
                   <button className="btn btn-delete" onClick={()=> deleteData(item.id, index)}>Delete</button>
                 </li>
