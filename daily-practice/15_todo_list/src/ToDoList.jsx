@@ -131,6 +131,8 @@ function ToDoList(){
         <div className='pendingTask-Container'>
             <ol>
             <h2 className='pending'> Pending Taks</h2>
+
+
             {/* <div className='updateContent-box '  >
                 <input className='editInput' type="text" placeholder='Edit Task' value = {updateValue} onChange={newupdatedTask}/>    
                 <button className='editInput-btn' onClick={addTask}>✔️</button>
@@ -149,7 +151,7 @@ function ToDoList(){
                     
                     </div> 
                 </li>
-            })}            
+            })}
            </ol>
         </div>
 

@@ -10,9 +10,8 @@ function App (){
   const [age, setage] = useState(0);
   const [id, setId] = useState(0);
 
-  const [updateBtn, setUpdateBtn] = useState(false);
+  // Just syncing the data
 
-  // Just syncing the data From Emplyed Data list
   useEffect(()=>{
     setData(EmployData)
   }, []);
@@ -34,7 +33,6 @@ function App (){
     setUpdateBtn(true);
   }
 
-  
   // Delete Feature
     const deleteData =(id, index)=>{
 

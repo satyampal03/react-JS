@@ -2,11 +2,6 @@
 React.js is a free, open-source JavaScript library used primarily to build fast and interactive user interfaces (UIs) for websites and mobile apps
 
 
-## In React.js, Types of the components
-
-``` there are two primary types of components: functional components and class components. 
-```
-
 1. Fundamentals (The Basics)
 
  > JSX: Writing HTML-like code inside JavaScript.
@@ -114,8 +109,6 @@ React.js is a free, open-source JavaScript library used primarily to build fast 
 - To start the development Server ---> [npm run dev]
 
 - Open URL on web-browser to run the application-server
-
- >  npm run dev is a custom command used to start the application in development mode
 
 ## Project Structure About the React Application
 
@@ -430,79 +423,11 @@ const value = useContext(MyContext);
 
 # useRef 
 
-> Render that's where useRef comes in useRef doesn't come a compomemt to render
-> Where it's value changes. its instead using of state Variable use gonna use Refrence
-
 ```
-useState() = Re-renders the component when the state value changes.useRef() = "use Reference" Does not cause re-renders when its value changes. When you want a component to "remember" some 
-information, but you don't want that information to trigger new renders.
+useState() = Re-renders the component when the state value changes.
 
-Accessing/Interacting with DOM elements Handling Focus, Animations, and Transitions
+useRef() = "use Reference" Does not cause re-renders when its value changes. When you want a component to "remember" some information, but you don't want that information to trigger new renders.
+Accessing/Interacting with DOM elements
+Handling Focus, Animations, and Transitions
 Managing Timers and Intervals
-```
-
-> provides a way to store a mutable value that persists across component re-renders without causing the component to re-render when the value is updated
-
-#### Key Uses of useRef
-The useRef hook has two primary use cases:
-
-> Accessing and Manipulating DOM Elements: 
-
-> Storing Mutable Values:
-
-
-## 1. Mounting: The "Birth"
-Mounting is the process where a component is created and inserted into the DOM for the first time.
-
-## 2. Unmounting: The "Death"
-Unmounting is the process where a component is removed from the DOM and destroyed.
-
-
-  > UseRef returns an object, an object has one property 
-
-  > useRefrence silently notice Everything what's going on in the function code.
-
-> useRef Gonna you'r componenet more efficient
-
-## useState() = 
-> Re-renders the component when the state value changes
-
- ## useRef() = 
- > "use Reference" Does not cause re-renders when its value changes.
-
-1. Accessing/Interacting with DOM elements
-
-2. Handling Focus, Animations, and Transitions
-
-3. Managing Timers and Intervals
-
-# Devlop the server for specific network port.
- > <npx parcel -p [newPort] index.html> is used to launch a development server for a web project with a specific network port
-
- ##  There are the limited Server Ports are available. [0 - 65,535];
- 
- ```The initial range for network ports is 0, and the final range (the maximum possible port number) is 65,535```
-
-
- # npm (Node Package Manager)
- ```
-Function: npm is primarily a package manager used to install and manage your project's dependencies. It installs packages into the node_modules folder and keeps track of them in your package.json file.
-```
-# npx (Node Package Execute)
-```Function: npx is a package runner that executes packages without necessarily installing them permanently or globally. It automatically looks for the package's executable binary, first in your local node_modules folder, and if not found, it downloads a temporary copy from the npm registry and runs it immediately.
-Running commands: This is why npx parcel index.html works—npx finds the parcel executable binary and runs it directly.
-```
-
-
-# Stop Watch
- > final project as the Practice
-
-
-# The useEffect Hook allows you to perform side effects in your components.
-
-```Some examples of side effects are: fetching data, directly updating the DOM, and timers.
-
-useEffect accepts two arguments. The second argument is optional.
-
-useEffect(<function>, <dependency>)```
 
