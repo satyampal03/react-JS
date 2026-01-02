@@ -15,7 +15,7 @@ function App (){
   // Just syncing the data From Emplyed Data list
   useEffect(()=>{
     setData(EmployData)
-  }, []); 
+  }, []);
 
   // Edit Feature
   const editData =(id, _)=>{
@@ -23,7 +23,7 @@ function App (){
         return item.id === id; 
     });
 
-    setId(id);
+    setId(id); // it's updatind also the id on state and that will use in fix it's position see on [update function ]
     setFname(dt[0].fname);
     setLname(dt[0].lname);
     setage(dt[0].age);
@@ -46,14 +46,37 @@ function App (){
       if(window.confirm(`Are you Sure to Delete this data`)){
       const deleteRow = data.filter((data, _)=>{
       return id !== data.id;
-    })
+    });
     setData(deleteRow);
       }
   }
 
   // save Feature 
-    const save = ()=>{
+    const save = (e)=>{
+      e.preventDefault(); // will prevent the other event handlers
+      const dt = [...data];
 
+      const newData = {
+        id:(data.length+1),
+        fname:fname,
+        lname:lname,
+        age: age,
+
+        // console.log(EmployData)
+      }
+
+      
+  console.log('user current id => ',EmployData.length+1);
+ console.log(EmployData)
+
+
+
+     dt.push(newData);
+      setData(dt);
+      // console.log(dt.push(newData));
+      console.log(data);
+
+      clear();
     }
 
     // clear Feature 
@@ -69,7 +92,19 @@ function App (){
 
     // update feature
     const update = ()=>{
-      
+      const index = data.map((item, index,arr)=>{
+        return item.id;
+      }).indexOf(id);
+
+      const dt = [...data]; // will take the all data
+
+      dt[index].fname = fname; // insertiung first name 
+      dt[index].lname = lname; // insertiung last name 
+      dt[index].age = age; // insertiung age
+
+      setData(dt);
+      clear();
+
     }
 
   return(<>
@@ -98,7 +133,7 @@ function App (){
                  
                  {
                   !updateBtn ?
-                  <button className="btn btn-edit" onClick={()=> save()}>Save</button>:
+                  <button className="btn btn-edit" onClick={(e)=> save(e)}>Save</button>:
                   <button className="btn btn-edit" onClick={()=> update()}>Update</button>
                  } 
                   <button className="btn btn-delete" onClick={()=> clear()}>Clear</button>
@@ -110,7 +145,7 @@ function App (){
 
       <div className="employData">
               <ul>
-                <h4>Sr.No</h4>
+                <h4>ID</h4>
                 <h4>First Name</h4>
                 <h4>Last Name</h4>
                 <h4>Age</h4>
