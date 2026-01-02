@@ -10,6 +10,7 @@ function App (){
   const [age, setage] = useState(0);
   const [id, setId] = useState(0);
 
+  const [updateBtn, setUpdateBtn] = useState(false);
   // Just syncing the data
 
   useEffect(()=>{
