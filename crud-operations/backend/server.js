@@ -1,5 +1,5 @@
-// const express = require('express');
-import express from 'express';
+const express = require('express');
+
 
 const app = express();
 
@@ -29,6 +29,7 @@ app.post('/user', async(req,res) =>{
      console.log('error occure', err);
      res.status(500).json({err: 'Internal Servar Error'});
  
+
   }
 
 })
@@ -37,7 +38,7 @@ app.post('/user', async(req,res) =>{
 
     try{
 
-      const data = await User.find();
+      const data = await Person.find();
       console.log('data fetched successfully');
 
       res.status(200).json(data);
