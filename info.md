@@ -66,18 +66,24 @@ React.js is a free, open-source JavaScript library used primarily to build fast 
 
 ## npm 
 ```
-(Node Package Manager) is the default package manager for Node.js, used for installing, managing, and sharing JavaScript packages and dependencies
+(Node Package Manager) is the default package manager for Node.js, used for installing, managing, and sharing JavaScript packages and dependencies 
+
+(NPM ~ It is the package manager for node.js that install and manage the all dependencies and packages for the javascript).
 ```
 
 ## npx 
 
 ```
 (Node Package Execute) is a tool bundled with npm (since version 5.2.0) that allows you to execute npm packages directly without permanently installing them on your system. 
+
+(NPX ~ It is the Node Package Execute Tool bundled with npm ) NPX allow to direct execute npm packages directly without permanently installing then on the system.
 ```
 
 ```an open-source front-end JavaScript library for building user interfaces (UIs) based on components. ```
 
-- React is all About the reusing the components
+- React is all About the reusing the components 
+
+(React is the open-source Library it's primary work is to build the Interective user interface for the mobile applicaitons and the web applications ).
 
 ```
 # Must Ignore these files
@@ -87,6 +93,9 @@ React.js is a free, open-source JavaScript library used primarily to build fast 
 - package-lock.json
 ```
 
+> Mount and Unmount
+>> Mount Meant that when any initial value render then we say it it's mount
+>> Unmount Meant that when any initial value gets updated then it's unmount 
 
 ## How to create New Project 
 
