@@ -439,4 +439,19 @@ useRef() = "use Reference" Does not cause re-renders when its value changes. Whe
 Accessing/Interacting with DOM elements
 Handling Focus, Animations, and Transitions
 Managing Timers and Intervals
+```
+
+# What is the Axios ~ API
+
+>> Axios help us to call the API's
+
+
+> Axios automatically transforms JSON response data into a usable JavaScript object.
+```
+
+Axios is a popular, promise-based HTTP client library for JavaScript.
+ That is widely used in React applications to make asynchronous requests to a server or API.
+
+  > It simplifies the process of fetching data, sending data, and handling interactions between the client-side React app and backend services.
+```
 
