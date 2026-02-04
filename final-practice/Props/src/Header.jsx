@@ -1,15 +1,38 @@
 import { useState } from "react";
 
-
-function Header(props){
-
-    return(
+function Header(props) {
+  return (
     <>
-        <p>this is the  Header of {props.name}</p>
-         <h1>This is the Header</h1>
+      <nav className="navbar">
+        <div className="logo">
+          <a href="#">LOGO</a>
+        </div>
+
+        <ul className="nav-links">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <div className="menu-toggle" onclick="toggleMenu()">
+          ☰
+        </div>
+      </nav>
     </>
-    )
-};
+  );
+}
 
 // Header.propTypes = {
 //   status: PropTypes.oneOf(["loading", "success", "error"]) // Value can be from there values
@@ -23,7 +46,7 @@ import PropTypes from "prop-Types";
 // };
 
 Header.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
 };
 
 export default Header;
