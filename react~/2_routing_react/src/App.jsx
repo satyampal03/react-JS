@@ -4,16 +4,14 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Product from "./pages/Product"
 import Contact from "./pages/Contect"
+import Header from "../public/componenets/Header"
 
 function App() {
 
   return (
     <>
-      <h1 
-      className="bg-amber-300 text-red-400 flex align-middle justify-center h-{40px}">
-        This is the Project Heading
-      </h1>
 
+      <Header />
       <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
