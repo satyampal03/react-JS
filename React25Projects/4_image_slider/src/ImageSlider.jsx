@@ -94,7 +94,6 @@ export const ImageSlider = ({ url, limit =1, page = 1 }) => {
 
     if (errorMsg) return <div>Error Occurred! {errorMsg}</div>;
 
-
        
     function handlePrevious(){
         setCurrentSlide(currentSlide === 0 ? images.length-1: currentSlide -1)
@@ -136,7 +135,6 @@ export const ImageSlider = ({ url, limit =1, page = 1 }) => {
                     return <button
                     key={index}
                     className={currentSlide === index ? "current-indicator": "current-indicator hide-current-indicator"
-
                     }
                    
                    onClick={()=>setCurrentSlide(index)}
