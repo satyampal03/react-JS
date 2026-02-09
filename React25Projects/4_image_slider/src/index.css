@@ -1,0 +1,81 @@
+/* 1. Center the entire layout on screen */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+}
+
+/* 2. Container set to half-screen size */
+.Container {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. Image Logic */
+.current-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+/* Fix: This class hides all images except the one matching currentSlide */
+.hide-current-image {
+  display: none;
+}
+
+/* 4. Navigation Buttons (Arrows) */
+.arrow {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+}
+
+.arrow-left {
+  left: 1.5rem;
+}
+
+.arrow-right {
+  right: 1.5rem;
+}
+
+/* 5. Indicators Logic */
+.circle-indicators {
+  position: absolute;
+  bottom: 1.5rem;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.current-indicator {
+  background-color: #00d2ff; /* Active color */
+  height: 12px;
+  width: 25px; /* Pill shape for active */
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Fix: This class makes non-active dots look like circles and faint */
+.hide-current-indicator {
+  background-color: #fff;
+  width: 12px; /* Standard circle for inactive */
+  opacity: 0.4;
+}
