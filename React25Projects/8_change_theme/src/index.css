@@ -1,0 +1,47 @@
+/* Light Theme */
+.light-dark-mode.light {
+  background-color: #ffffff; /* page background */
+  color: #000000;            /* text color */
+  min-height: 100vh;         /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme */
+.light-dark-mode.dark {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Container inside the theme wrapper */
+.container {
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0; /* light button background */
+  color: #000000;            /* light button text */
+  transition: all 0.3s ease;
+}
+
+/* Button colors for dark theme */
+.light-dark-mode.dark button {
+  background-color: #333333;
+  color: #ffffff;
+}
