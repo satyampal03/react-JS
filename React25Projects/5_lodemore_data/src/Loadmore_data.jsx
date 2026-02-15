@@ -42,7 +42,16 @@ import { useState } from 'react'
     },[products]);
 
 
-  if (loading) return <div>Loading Data Please Wait</div>;
+  // loader
+if (loading) {
+  return (
+    <div className="loader-wrapper">
+      <span className="loader"></span>
+      <p>Loading data, please wait...</p>
+    </div>
+  );
+}
+
 
   return     (
     <div className='container'>
