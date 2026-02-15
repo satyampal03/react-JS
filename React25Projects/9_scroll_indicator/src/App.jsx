@@ -4,7 +4,7 @@ import { Scroll_indicator } from './Scroll_indicator'
 
 const App = () => {
   return (
-    <Scroll_indicator url ={'https://dummyjson.com/products?limit=100'}/>
+    <Scroll_indicator url ={'https://dummyjson.com/products?limit=30'}/>
   )
 }
 
