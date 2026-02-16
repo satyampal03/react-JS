@@ -1,192 +1,77 @@
-/* ======================
-   Root animation base
-====================== */
-
+/* main wrapper */
 .wrapper {
-  width: 100%;
-  max-width: 950px;
-  margin: 50px auto;
-  border-radius: 16px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(180deg, #ffffff, #f9fafb);
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.6);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
   font-family: system-ui, sans-serif;
-  animation: fadeIn 0.4s ease;
 }
 
-/* ======================
-   Top tabs bar
-====================== */
-
+/* horizontal menu bar */
 .heading {
   display: flex;
-  gap: 6px;
-  padding: 8px;
-  background: #f1f5f9;
-  position: relative;
+  align-items: center;
+  background: #0f172a;
+  padding: 0 10px;
 }
 
-/* tab button */
+/* each menu item */
 .tab {
-  flex: 1;
-  padding: 12px 18px;
-  text-align: center;
+  padding: 14px 20px;
   cursor: pointer;
-  border-radius: 12px;
   position: relative;
-  transition: all 0.25s ease;
-  overflow: hidden;
+  transition: background 0.2s ease;
 }
 
-/* hover glow */
-.tab:hover {
-  background: rgba(79,70,229,0.08);
-  transform: translateY(-1px);
-}
-
-/* label */
+/* label text */
 .label {
+  color: #e5e7eb;
   font-size: 14px;
   font-weight: 600;
-  color: #475569;
-  position: relative;
-  z-index: 2;
 }
 
-/* active tab */
+/* hover effect */
+.tab:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* active menu item */
 .tab.active {
-  background: linear-gradient(135deg, #6366f1, #22c55e);
-  box-shadow:
-    0 10px 20px rgba(79,70,229,0.25);
+  background: #1e293b;
+}
+
+/* active underline bar */
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #22c55e;
+  border-radius: 2px 2px 0 0;
 }
 
 /* active text */
 .tab.active .label {
-  color: #ffffff;
+  color: #22c55e;
 }
 
-/* animated highlight */
-.tab::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  background: radial-gradient(circle at top,
-    rgba(255,255,255,0.35),
-    transparent 60%);
-  transition: opacity 0.3s ease;
-}
-
-.tab.active::before {
-  opacity: 1;
-}
-
-/* remove old underline */
-.tab.active::after {
-  display: none;
-}
-
-/* ======================
-   Content area
-====================== */
-
+/* content area */
 .content {
-  padding: 28px 28px 32px;
+  padding: 24px;
   background: #ffffff;
-  animation: contentFade 0.35s ease;
-  min-height: 160px;
   color: #0f172a;
   line-height: 1.6;
   font-size: 15px;
 }
 
-/* normal content text */
-.content > div {
-  animation: slideUp 0.35s ease;
-}
-
-/* RandomContent h1 */
+/* content h1 */
 .content h1 {
+  margin: 0;
   font-size: 22px;
   font-weight: 700;
-  color: #0f172a;
-  margin: 0;
 }
-
-/* ======================
-   Sidebar menu mode
-====================== */
-
-.wrapper.menu {
-  display: flex;
-  min-height: 360px;
-}
-
-/* left panel */
-.wrapper.menu .heading {
-  width: 230px;
-  flex-direction: column;
-  padding: 10px;
-  gap: 8px;
-  border-right: 1px solid #e5e7eb;
-}
-
-/* menu item */
-.wrapper.menu .tab {
-  text-align: left;
-  padding: 12px 14px;
-}
-
-/* menu hover */
-.wrapper.menu .tab:hover {
-  background: rgba(99,102,241,0.08);
-}
-
-/* active menu */
-.wrapper.menu .tab.active {
-  background: linear-gradient(135deg, #4f46e5, #22c55e);
-}
-
-/* content side */
-.wrapper.menu .content {
-  flex: 1;
-}
-
-/* ======================
-   Animations
-====================== */
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.98); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-@keyframes contentFade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ======================
-   Mobile friendly
-====================== */
-
-@media (max-width: 700px) {
-
-  .wrapper.menu {
-    flex-direction: column;
-  }
-
-  .wrapper.menu .heading {
-    width: 100%;
-    flex-direction: row;
-    border-right: none;
-    border-bottom: 1px solid #e5e7eb;
-  }
-}
+  
