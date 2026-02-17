@@ -2,11 +2,17 @@ import React, { useState } from 'react'
 
 export const Tabs = ({tabsContent,onChange}) => {
 
-  const [currentTabIndex, setCurrentTabIndex] = useState(0);
+
+
+  console.log('====>>>>',tabsContent);
+  
+
+
+  const [currentTabIndex, setCurrentTabIndex] = useState(null);
 
 function handleOnClick(getCurrentIndex){
   setCurrentTabIndex(getCurrentIndex)
-  onChange(getCurrentIndex);
+  // onChange(getCurrentIndex);
 }
 
   return (
