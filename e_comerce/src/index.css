@@ -1,0 +1,374 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+  color: #1f2933;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* cart badge */
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: crimson;
+  color: white;
+  font-size: 11px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box {
+  width: 340px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  border-color: #6366f1;
+}
+
+.search-results {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  max-height: 260px;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.search-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-item:hover {
+  background: #f3f4f6;
+}
+
+.not-found {
+  padding: 12px;
+  font-size: 14px;
+  color: #ef4444;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  height: 300px;
+  margin: 22px 28px;
+  background: linear-gradient(120deg, #dbeafe, #eef2ff);
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+
+/* =========================================================
+   CATEGORY SECTION
+========================================================= */
+
+.category-section {
+  margin: 30px 28px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.category-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* =========================================================
+   GRID
+========================================================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card img {
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card .price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 4px;
+}
+
+.card .rating {
+  font-size: 13px;
+  color: #f59e0b;
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS PAGE
+========================================================= */
+
+.product-page {
+  margin: 30px 28px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 30px;
+}
+
+.product-page img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.product-info h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.product-info .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 10px 0;
+}
+
+.product-info .rating {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.product-info button {
+  margin-right: 10px;
+}
+
+
+/* =========================================================
+   CATEGORY PAGE (VIEW ALL)
+========================================================= */
+
+.category-page {
+  margin: 30px 28px;
+}
+
+.category-page h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  margin-top: 60px;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 24px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.footer-center {
+  font-size: 13px;
+  color: #cbd5f5;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials span {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.footer-socials span:hover {
+  background: #334155;
+}
+
+
+/* =========================================================
+   SMALL DEV HELPERS
+========================================================= */
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
