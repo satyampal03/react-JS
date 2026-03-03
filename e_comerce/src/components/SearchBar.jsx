@@ -50,15 +50,19 @@
 //   }
 
 //   export default SearchBar
+
+
+
+
+
 import { useState } from "react";
 import { products } from "../data/products";
 import { useNavigate } from "react-router-dom";
 
 function SearchBar() {
   const [query, setQuery] = useState("");
-
   const [results, setResults] = useState([]);
-
+  const navigate = useNavigate();
 
   function handleChange(e) {
     const value = e.target.value;
@@ -68,7 +72,6 @@ function SearchBar() {
     );
     setResults(filtered);
   }
-  const navigate = useNavigate();
 
   function itemSelected(id) {
     navigate(`/product/${id}`);
@@ -87,6 +90,8 @@ function SearchBar() {
           onChange={handleChange}
           className="w-full px-12 py-3 bg-white border-2 border-gray-200 rounded-full focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all shadow-sm text-gray-700"
         />
+        {/* Search Icon (Magnifying Glass) */}
+        
       </div>
 
       {/* Floating Autocomplete Dropdown */}

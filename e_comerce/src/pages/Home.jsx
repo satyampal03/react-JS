@@ -5,6 +5,9 @@ import Footer from "../components/Footer";
 
 import { products } from "../data/products";
 
+
+
+
 function Home() {
   return (
     <>
